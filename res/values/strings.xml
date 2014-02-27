@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Fart</string>
+    <string name="action_settings">Settings</string>
+    <string name="compartir">Compartir</string>
+    <string name="search">Cercar</string>
+    <string name="star">Valoració</string>
+    <string name="info_details">Details</string>
+    <string name="esborrar">Esborrar</string>
+    <string name="editar">Editar</string>
+    <string name="nouT">Títol</string>
+    <string name="nouC">Nou Acudit</string>
+    <string name="dialeg">Puntuació</string>
+    <string name="select">Seleccionat</string>
+    <string name="selected">Seleccionats</string>
+    <string name="pref_sound">So de l`aplicació</string>
+    <string name="pref_sound_summ">So activat</string>
+
+</resources>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/nouTitol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nouT"
+            android:textSize="20sp"
+            android:width="80dp" />
+
+        <EditText
+            android:id="@+id/nouTitolText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textMultiLine" >
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/nouCos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nouC"
+            android:textSize="20sp"
+            android:width="80dp" />
+
+        <EditText
+            android:id="@+id/nouCosText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textMultiLine" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <RatingBar
+            android:id="@+id/nouRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        
+    </LinearLayout>
+</LinearLayout>

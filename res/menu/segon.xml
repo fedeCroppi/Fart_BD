@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/compartir"
+        android:icon="@android:drawable/ic_menu_share"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:title="@string/compartir"/>
+    <item
+        android:id="@+id/star"
+        android:icon="@android:drawable/star_big_off"
+        android:title="@string/star"
+        android:showAsAction="ifRoom|collapseActionView" />
+    
+    <item
+        android:id="@+id/info_details"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="@string/info_details"
+        android:showAsAction="ifRoom|collapseActionView"/>
+
+</menu>
