@@ -42,18 +42,12 @@ public class Main_Activity extends Activity implements DialegListener {
 	
 	private SQLiteHelper sql;
 	private Conversor acuConv;
-	
-	private boolean so;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		// Recuperar preferencies
-		SharedPreferences config = getPreferences(0);
-		so = config.getBoolean("pref_sound", true);
-
 		sql = new SQLiteHelper(this, "acuditsBD.dbs", null, 1);
 		SQLiteDatabase database = sql.getWritableDatabase();
 		
@@ -300,15 +294,6 @@ public class Main_Activity extends Activity implements DialegListener {
 	@Override
 	public void onConfigurationChanged(Configuration novaconfig) {
 		super.onConfigurationChanged(novaconfig);
-	}
-	
-	@Override
-	protected void onStop(){
-		super.onStop();
-		SharedPreferences config = getPreferences(0);
-		SharedPreferences.Editor editor = config.edit();
-		editor.putBoolean("pref_sound", so);
-		editor.commit();
 	}
 
 	public final class ActionModeCallback implements ActionMode.Callback {

@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.RatingBar;
@@ -20,7 +21,6 @@ import android.widget.Toast;
 public class Acudit_Activity extends Activity implements DialegListener {
 
 	private Acudit acu;
-	private boolean so;
 	private MediaPlayer mediaPlayer;
 
 	@Override
@@ -28,8 +28,9 @@ public class Acudit_Activity extends Activity implements DialegListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.acudit);
 		
-		SharedPreferences config= getPreferences(0);
-		so= config.getBoolean("pref_sound", true);
+		// Recuperar preferencies
+		SharedPreferences config = PreferenceManager.getDefaultSharedPreferences(this);
+		boolean so = config.getBoolean("pref_sound", false);
 
 		ActionBar aBar = getActionBar();
 		aBar.setDisplayHomeAsUpEnabled(true);
@@ -57,7 +58,9 @@ public class Acudit_Activity extends Activity implements DialegListener {
 	@Override
 	public void onDestroy() {
 	    super.onDestroy();
-	    mediaPlayer.stop();
+	    if(mediaPlayer != null && mediaPlayer.isPlaying()){
+	    	mediaPlayer.stop();
+	    }
 	}
 	
 	@Override
